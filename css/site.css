@@ -1,7 +1,7 @@
 :root {
     /* colors */
     --primary-color: #1d5888;
-    --secondary-color: #FF3131;
+    --secondary-color: #60B0F4;
     --heading-bg-color: #e2e3e5; /* Bootstrap Secondary Sub Color */
     --heading-color: #6c757d; 
     --dark-color: #292929;
@@ -22,8 +22,15 @@
     font-size: large;
 }
 
+@font-face {
+    font-family: 'Now Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Now Bold'), url('/img/Now-Bold.woff') format('woff');
+    }
+
 .logoFont {
-    font-family: "Teko", sans-serif;
+    font-family: 'Now Bold';
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
