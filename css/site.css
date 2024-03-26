@@ -8,19 +8,12 @@
     --white-color: #e7e7e7;
 }
 
+.highlightme { background-color:var(--secondary-color) }
+
 .btnColor {
     background-color: var(--secondary-color);
     color: white;
-}
-
-.odd {
-    font-weight: 100;
-}
-
-.even {
-    font-weight: bold;
-    font-size: large;
-}
+} 
 
 @font-face {
     font-family: 'Now Bold';

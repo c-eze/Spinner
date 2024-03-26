@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>Spinner: A Coding Project By Chikere Ezekannagha</title>
+    <title>SPINNER: A Coding Project By Chikere Ezekannagha</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,7 +20,7 @@
 
     <link href="/css/site.css" rel="stylesheet"> 
     <link href="/css/prism.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="/img/favicon.ico">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -57,21 +57,64 @@
 <!-- === Main Section === -->
 <main class="flex-shrink-0">
     <div class="container py-4 px-5 mt-5">
-        <h1 class="border-1 border-bottom border-dark">The Code for Spinner</h1>
+        <h1 class="border-1 border-bottom border-dark">The Code for SPINNER</h1>
         <div class="row row-cols-1 row-cols-lg-2">
             <div class="col-lg-8">
                 <pre class="line-numbers"><code class="language-javascript">
-                    //Call Hello World
-                    function HelloWorld() {
-                        alert("Hello World");
-                    }
+                    //Get the string from the page 
+//controller function
+function getValue () {
+    document.getElementById("alert").classList.add("invisible");
+    
+    let userString = document.getElementById("userString").value;
+
+    let revString = reverseString(userString);
+
+    displayString(revString);
+}
+
+//Reverse the string
+//logic function
+function reverseString(userString) {
+    let revString = [];
+
+    //reverse a string using a for loop
+    for (let index = userString.length - 1; index >= 0; index--) {
+        revString += userString[index];        
+    }
+
+    return revString;
+}
+
+//Display the reversed string to the user
+//View Function
+function displayString(revString) {
+    //write to the page
+    document.getElementById("msg").innerHTML = `Your string reversed is: ${revString}`;
+
+    //show the alert box
+    document.getElementById("alert").classList.remove("invisible");
+}
                 </code>
                 </pre>
             </div>
             <div class="col-lg-4">
-                <p>The Code is structured in one function.</p>
-                <h5>Hello World</h5>
-                <p>Hello World is a function that displays an alert with a message of "Hello World"</p>
+                <p>The code is structured in three functions.</p>
+                <h5>getValue</h5>
+                <p>This is a controller function that gets the user's input from the DOM, processes the value, and then
+                    ensures the result is displayed back to the user as a reversed string.  
+                </p>
+                <h5>reverseString</h5>
+                <p>This is a logic function that is responsible for returning a reversed string. The user's input is passed
+                    into the function where each individual character of the string is copied into a string array using
+                    a for loop, starting with the last character first until the first character is reached. The function
+                    then returns a reversed string.
+                </p>
+                <h5>displayString</h5>
+                <p>This function acts as a view function where the reversed string to be displayed is passed into the 
+                    function. The function uses the <span class="highlightme">innerHTML</span> property to write the string 
+                    to the HTML page and then shows the result by unhiding the alert box.
+                </p>
             </div>
         </div>
     </div>
